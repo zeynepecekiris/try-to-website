@@ -1,32 +1,80 @@
-import { Container, Typography, Grid, Paper, Box, Stack, Divider } from "@mui/material";
+import { Container, Typography, Grid, Paper, Box, Stack, Divider, keyframes } from "@mui/material";
 import StorefrontIcon from '@mui/icons-material/Storefront';
 import EmojiObjectsIcon from '@mui/icons-material/EmojiObjects';
 import GroupsIcon from '@mui/icons-material/Groups';
 import StarIcon from '@mui/icons-material/Star';
+import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+
+// Animasyon keyframes tanımlamaları
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
+const slideIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`;
+
+const pulse = keyframes`
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+`;
 
 function About() {
   const values = [
     {
-      icon: <StorefrontIcon sx={{ fontSize: 40, color: '#2196F3' }} />,
+      icon: <StorefrontIcon sx={{ fontSize: 40, color: 'primary.main' }} />,
       title: "Güvenilir Hizmet",
       description: "10 yılı aşkın süredir müşterilerimize en kaliteli ürünleri sunuyoruz."
     },
     {
-      icon: <EmojiObjectsIcon sx={{ fontSize: 40, color: '#2196F3' }} />,
+      icon: <EmojiObjectsIcon sx={{ fontSize: 40, color: 'primary.main' }} />,
       title: "Uzman Kadro",
       description: "Teknoloji tutkunlarından oluşan ekibimizle size en iyi hizmeti veriyoruz."
     },
     {
-      icon: <GroupsIcon sx={{ fontSize: 40, color: '#2196F3' }} />,
+      icon: <GroupsIcon sx={{ fontSize: 40, color: 'primary.main' }} />,
       title: "Müşteri Memnuniyeti",
       description: "Müşterilerimizin memnuniyeti bizim önceliğimizdir."
     }
   ];
 
+  const missionItems = [
+    "Sizlere en yeni teknolojiyi en iyi fiyatlarla sunmak",
+    "Satın alma öncesi ve sonrası müşteri desteğiyle tam memnuniyet sağlamak",
+    "Teknolojiyi sadece bir araç değil, hayatı kolaylaştıran bir deneyim haline getirmek",
+    "Sizlerle birlikte büyüyerek, mobil dünyanın geleceğine yön vermek"
+  ];
+
   return (
     <Container maxWidth="lg" sx={{ mt: 4, mb: 8 }}>
       {/* Başlık Bölümü */}
-      <Box sx={{ mb: 6, textAlign: 'left' }}>
+      <Box sx={{ 
+        mb: 6, 
+        textAlign: 'center',
+        animation: `${fadeIn} 1s ease-out`
+      }}>
         <Typography
           variant="h3"
           component="h1"
@@ -34,78 +82,143 @@ function About() {
             fontWeight: "bold",
             color: "primary.main",
             mb: 2,
-            textShadow: '0 0 10px rgba(33, 150, 243, 0.3)'
+            textShadow: '0 0 10px rgba(33, 150, 243, 0.3)',
+            '&:hover': {
+              transform: 'scale(1.02)',
+              transition: 'transform 0.3s ease'
+            }
           }}
         >
           Hakkımızda
         </Typography>
+        <Box sx={{ 
+          display: 'flex', 
+          alignItems: 'center', 
+          justifyContent: 'center', 
+          mb: 2,
+          animation: `${slideIn} 1s ease-out 0.3s both`
+        }}>
+          <PhoneAndroidIcon sx={{ 
+            fontSize: 30, 
+            color: 'primary.main', 
+            mr: 1,
+            animation: `${pulse} 2s infinite ease-in-out`
+          }} />
+          <Typography
+            variant="h5"
+            color="text.secondary"
+            sx={{ fontWeight: 'bold' }}
+          >
+            Teknolojiyi Tutkuyla Buluşturuyoruz
+          </Typography>
+        </Box>
         <Typography
-          variant="h6"
+          variant="body1"
           color="text.secondary"
-          sx={{ mb: 4, maxWidth: 800 }}
+          sx={{ mb: 4, maxWidth: 800, mx: 'auto' }}
         >
-          2014 yılından beri teknoloji tutkunlarına hizmet veriyoruz
+          Mobil Mağaza olarak 2014 yılından beri sadece bir teknoloji mağazası değil, bir deneyim merkezi olarak hizmet veriyoruz. 
+          Amacımız, en son teknolojiyi herkes için erişilebilir, güvenilir ve heyecan verici hale getirmek.
+        </Typography>
+        <Typography
+          variant="body1"
+          color="text.secondary"
+          sx={{ mb: 6, maxWidth: 800, mx: 'auto' }}
+        >
+          Bugün binlerce teknoloji tutkunu ile aynı heyecanı paylaşarak, mobil dünyada bir adım önde olmanızı sağlamak için çalışıyoruz.
         </Typography>
       </Box>
 
       {/* Ana İçerik */}
       <Grid container spacing={6}>
-        {/* Sol Taraf - Şirket Hikayesi */}
-        <Grid item xs={12} md={6}>
-          <Stack spacing={4}>
-            <Box>
-              <Typography variant="h5" gutterBottom sx={{ color: 'primary.main', fontWeight: 'bold', textShadow: '0 0 8px rgba(33, 150, 243, 0.2)' }}>
-                Hikayemiz
-              </Typography>
-              <Typography paragraph color="text.secondary">
-                Mobil Mağaza olarak, 2014 yılında teknoloji tutkunlarına en iyi hizmeti sunma hayaliyle yola çıktık. 
-                Bugün, Türkiye'nin önde gelen mobil teknoloji perakendecilerinden biri olarak, 
-                müşterilerimize en son teknoloji ürünlerini sunmaya devam ediyoruz.
-              </Typography>
-            </Box>
-            <Box>
-              <Typography variant="h5" gutterBottom sx={{ color: 'primary.main', fontWeight: 'bold', textShadow: '0 0 8px rgba(33, 150, 243, 0.2)' }}>
-                Misyonumuz
-              </Typography>
-              <Typography paragraph color="text.secondary">
-                Müşterilerimize en kaliteli mobil teknoloji ürünlerini, en iyi fiyatlarla sunmak ve 
-                satış sonrası destek hizmetlerimizle tam müşteri memnuniyeti sağlamak.
-              </Typography>
-            </Box>
-          </Stack>
-        </Grid>
-
-        {/* Sağ Taraf - Değerlerimiz */}
-        <Grid item xs={12} md={6}>
+        {/* Hikayemiz Bölümü - Tam Genişlik */}
+        <Grid item xs={12}>
           <Paper 
             elevation={0} 
             sx={{ 
               p: 4, 
               background: 'linear-gradient(145deg, #132F4C, #0A1929)',
               border: '1px solid rgba(255, 255, 255, 0.1)',
-              boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)'
+              boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+              mb: 4,
+              animation: `${fadeIn} 1s ease-out 0.6s both`,
+              transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+              '&:hover': {
+                transform: 'translateY(-5px)',
+                boxShadow: '0 8px 30px rgba(33, 150, 243, 0.3)'
+              }
             }}
           >
-            <Stack spacing={4}>
-              {values.map((value, index) => (
-                <Box key={index}>
-                  {index > 0 && <Divider sx={{ my: 2, borderColor: 'rgba(255, 255, 255, 0.1)' }} />}
-                  <Grid container spacing={2} alignItems="center">
-                    <Grid item>
-                      {value.icon}
-                    </Grid>
-                    <Grid item xs>
-                      <Typography variant="h6" gutterBottom sx={{ fontWeight: 'bold', color: 'primary.light' }}>
-                        {value.title}
-                      </Typography>
-                      <Typography color="text.secondary">
-                        {value.description}
-                      </Typography>
-                    </Grid>
-                  </Grid>
-                </Box>
+            <Typography variant="h5" gutterBottom sx={{ color: 'primary.main', fontWeight: 'bold', textShadow: '0 0 8px rgba(33, 150, 243, 0.2)', display: 'flex', alignItems: 'center', gap: 1 }}>
+              <StorefrontIcon />
+              Hikayemiz
+            </Typography>
+            <Typography paragraph color="text.secondary">
+              Teknolojiye olan tutkumuz, bizi 2014 yılında bu yola çıkmaya teşvik etti.
+              O dönemde, kaliteli ve güvenilir mobil teknolojiye ulaşmanın zorluklarını biliyorduk. 
+              Sadece bir mağaza olmak değil, insanların hayatlarını kolaylaştıran bir platform oluşturmak istedik.
+            </Typography>
+            <Typography paragraph color="text.secondary">
+              İlk günden beri, en iyi markalarla en yeni ürünleri, en avantajlı fiyatlarla sunmaya odaklandık. 
+              Ancak bizim için en önemli olan şey, müşterilerimize verdiğimiz değer ve güven oldu.
+            </Typography>
+            <Typography paragraph color="text.secondary" sx={{ mb: 0 }}>
+              Bugün geldiğimiz noktada, Türkiye'nin en güvenilir mobil teknoloji mağazalarından biri olmanın 
+              haklı gururunu yaşıyoruz. Müşterilerimiz yalnızca bir ürün satın almıyor, bizimle birlikte bir deneyimin parçası oluyor.
+            </Typography>
+          </Paper>
+        </Grid>
+
+        {/* Misyonumuz Bölümü - Tam Genişlik */}
+        <Grid item xs={12}>
+          <Paper 
+            elevation={0} 
+            sx={{ 
+              p: 4, 
+              background: 'linear-gradient(145deg, #132F4C, #0A1929)',
+              border: '1px solid rgba(255, 255, 255, 0.1)',
+              boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+              animation: `${fadeIn} 1s ease-out 0.9s both`,
+              transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+              '&:hover': {
+                transform: 'translateY(-5px)',
+                boxShadow: '0 8px 30px rgba(33, 150, 243, 0.3)'
+              }
+            }}
+          >
+            <Box sx={{ mb: 3 }}>
+              <Typography variant="h5" gutterBottom sx={{ color: 'primary.main', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: 1 }}>
+                <EmojiObjectsIcon />
+                Misyonumuz
+              </Typography>
+              <Typography variant="h6" sx={{ color: 'primary.light', mb: 3 }}>
+                Sadece Ürün Değil, Değer Sunuyoruz
+              </Typography>
+            </Box>
+            <Grid container spacing={3}>
+              {missionItems.map((item, index) => (
+                <Grid item xs={12} md={6} key={index}>
+                  <Box sx={{ 
+                    display: 'flex', 
+                    gap: 2, 
+                    alignItems: 'flex-start',
+                    animation: `${slideIn} 1s ease-out ${0.3 * (index + 1)}s both`
+                  }}>
+                    <CheckCircleIcon sx={{ 
+                      color: 'primary.main', 
+                      mt: 0.5,
+                      transition: 'transform 0.3s ease',
+                      '&:hover': {
+                        transform: 'scale(1.2) rotate(360deg)'
+                      }
+                    }} />
+                    <Typography color="text.secondary">
+                      {item}
+                    </Typography>
+                  </Box>
+                </Grid>
               ))}
-            </Stack>
+            </Grid>
           </Paper>
         </Grid>
 
@@ -128,10 +241,11 @@ function About() {
                       background: 'linear-gradient(145deg, #132F4C, #0A1929)',
                       border: '1px solid rgba(255, 255, 255, 0.1)',
                       height: '100%',
-                      transition: 'transform 0.3s ease-in-out',
+                      animation: `${fadeIn} 1s ease-out ${0.3 * (index + 4)}s both`,
+                      transition: 'all 0.3s ease-in-out',
                       '&:hover': {
-                        transform: 'translateY(-5px)',
-                        boxShadow: '0 8px 20px rgba(33, 150, 243, 0.2)'
+                        transform: 'translateY(-8px) scale(1.05)',
+                        boxShadow: '0 12px 30px rgba(33, 150, 243, 0.3)'
                       }
                     }}
                   >

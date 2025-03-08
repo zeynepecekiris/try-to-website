@@ -42,10 +42,8 @@ function Navbar() {
     <AppBar 
       position="fixed" 
       sx={{ 
-        background: 'linear-gradient(to right, #0A1929, #132F4C)',
-        backdropFilter: 'blur(8px)',
-        borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
-        boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+        background: '#232f3e',
+        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)',
       }}
     >
       <Toolbar>
@@ -56,8 +54,7 @@ function Navbar() {
             flexGrow: 1,
             fontWeight: "bold",
             letterSpacing: 1,
-            color: "primary.main",
-            textShadow: '0 0 10px rgba(33, 150, 243, 0.3)',
+            color: "#ffffff",
           }}
         >
           Mobil Mağaza
@@ -68,7 +65,7 @@ function Navbar() {
             <IconButton
               size="large"
               edge="end"
-              sx={{ color: "primary.main" }}
+              sx={{ color: "#ffffff" }}
               aria-label="menu"
               onClick={handleMenu}
             >
@@ -81,7 +78,7 @@ function Navbar() {
               PaperProps={{
                 sx: {
                   mt: 1.5,
-                  background: '#132F4C',
+                  background: '#232f3e',
                   border: '1px solid rgba(255, 255, 255, 0.1)',
                 }
               }}
@@ -96,9 +93,9 @@ function Navbar() {
                     display: "flex",
                     alignItems: "center",
                     gap: 1,
-                    color: "primary.main",
+                    color: "#ffffff",
                     '&:hover': {
-                      backgroundColor: 'rgba(33, 150, 243, 0.1)',
+                      backgroundColor: 'rgba(255, 255, 255, 0.1)',
                     },
                   }}
                 >
@@ -117,9 +114,9 @@ function Navbar() {
                 to={item.path}
                 startIcon={item.icon}
                 sx={{
-                  color: "primary.main",
+                  color: "#ffffff",
                   '&:hover': {
-                    backgroundColor: 'rgba(33, 150, 243, 0.1)',
+                    backgroundColor: 'rgba(255, 255, 255, 0.1)',
                     transform: 'translateY(-2px)',
                   },
                   transition: 'all 0.3s ease-in-out',

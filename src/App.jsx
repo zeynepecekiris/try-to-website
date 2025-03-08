@@ -9,26 +9,26 @@ import Navbar from "./components/Navbar";
 // Özel tema oluşturma
 const theme = createTheme({
   palette: {
-    mode: 'dark',
+    mode: 'light',
     primary: {
-      main: '#2196F3',
-      light: '#64B5F6',
-      dark: '#1976D2',
+      main: '#232f3e',
+      light: '#37475A',
+      dark: '#131921',
       contrastText: '#FFFFFF',
     },
     secondary: {
-      main: '#1E88E5',
-      light: '#42A5F5',
-      dark: '#1565C0',
-      contrastText: '#FFFFFF',
+      main: '#ff9900',
+      light: '#ffac31',
+      dark: '#cc7a00',
+      contrastText: '#000000',
     },
     background: {
-      default: '#0A1929',
-      paper: '#132F4C',
+      default: '#ffffff',
+      paper: 'rgba(255, 255, 255, 0.8)',
     },
     text: {
-      primary: '#FFFFFF',
-      secondary: '#B2BAC2',
+      primary: '#232f3e',
+      secondary: '#37475A',
     },
   },
   typography: {
@@ -44,6 +44,15 @@ const theme = createTheme({
     },
   },
   components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          background: 'linear-gradient(180deg, #aed7ff 0%, #ffd1dc 50%, #ffd4ba 100%)',
+          backgroundAttachment: 'fixed',
+          minHeight: '100vh',
+        },
+      },
+    },
     MuiButton: {
       styleOverrides: {
         root: {
@@ -56,6 +65,8 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           borderRadius: 12,
+          backgroundColor: 'rgba(255, 255, 255, 0.9)',
+          backdropFilter: 'blur(10px)',
         },
       },
     },

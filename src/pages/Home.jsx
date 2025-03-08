@@ -9,34 +9,26 @@ import Contact from "./Contact";
 function Home() {
   return (
     <Box sx={{ py: 8 }}>
-      {/* Logo - Sol Üst */}
-      <Container maxWidth="lg" sx={{ mb: 8 }}>
-        <Box sx={{ display: 'flex', alignItems: 'center', mb: 4 }}>
-          <img 
-            src="/logo.png" 
-            alt="Mobil Mağaza Logo" 
-            style={{ 
-              height: '60px',
-              filter: 'drop-shadow(0 0 10px rgba(33, 150, 243, 0.3))'
-            }} 
-          />
-        </Box>
-      </Container>
-
       {/* Ana Sayfa Bölümü */}
       <Container maxWidth="lg" sx={{ mb: 12 }}>
-        <Box sx={{ textAlign: "center", mb: 10 }}>
+        <Box sx={{ 
+          textAlign: "center", 
+          mb: 10,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center"
+        }}>
           <Typography
             variant="h2"
             component="h1"
             sx={{
               fontWeight: "bold",
               color: "#2196F3",
-              mb: 4,
-              textShadow: "2px 2px 4px rgba(0,0,0,0.1)"
+              textShadow: "2px 2px 4px rgba(0,0,0,0.1)",
+              mb: 4
             }}
           >
-            Mobil Mağazamıza Hoş Geldiniz
+            MobistoreX'e Hoş Geldiniz
           </Typography>
           <Typography variant="h5" color="text.secondary" sx={{ mb: 8 }}>
             En yeni telefonlar ve aksesuarlar burada!
@@ -186,7 +178,7 @@ function Home() {
             gap: 3
           }}>
             <img 
-              src="/logo.png" 
+              src="/DALL·E 2025-03-08 11.45.25 - A simple and modern icon using gradient colors, fitting a tech-themed online store. The icon should have a sleek and professional design, using smooth.webp" 
               alt="Mobil Mağaza Logo" 
               style={{ 
                 height: '80px',
@@ -201,7 +193,7 @@ function Home() {
                 textAlign: 'center'
               }}
             >
-              © 2024 Mobil Mağaza. Tüm hakları saklıdır.
+              © 2024 MobistoreX. Tüm hakları saklıdır.
             </Typography>
           </Box>
         </Container>

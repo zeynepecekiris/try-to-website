@@ -77,17 +77,16 @@ function Contact() {
           component="h1"
           sx={{
             fontWeight: "bold",
-            color: "primary.main",
+            color: "#1976D2",
             mb: 2,
-            textShadow: '0 0 10px rgba(33, 150, 243, 0.3)'
+            textShadow: '0 0 10px rgba(25, 118, 210, 0.3)'
           }}
         >
           İletişim
         </Typography>
         <Typography
           variant="h6"
-          color="text.secondary"
-          sx={{ mb: 4 }}
+          sx={{ mb: 4, color: '#1976D2' }}
         >
           Sorularınız için bize ulaşın
         </Typography>
@@ -100,8 +99,9 @@ function Contact() {
             elevation={0} 
             sx={{ 
               p: 4,
-              background: 'linear-gradient(145deg, #132F4C, #0A1929)',
-              border: '1px solid rgba(255, 255, 255, 0.1)',
+              background: 'rgba(255, 255, 255, 0.9)',
+              backdropFilter: 'blur(10px)',
+              border: '1px solid rgba(25, 118, 210, 0.2)',
               boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)'
             }}
           >
@@ -110,10 +110,10 @@ function Contact() {
                 <Typography 
                   variant="h5" 
                   sx={{ 
-                    color: 'primary.main', 
+                    color: '#1976D2', 
                     fontWeight: 'bold', 
                     mb: 2, 
-                    textShadow: '0 0 8px rgba(33, 150, 243, 0.2)',
+                    textShadow: '0 0 8px rgba(25, 118, 210, 0.2)',
                     textAlign: 'center'
                   }}
                 >
@@ -129,12 +129,19 @@ function Contact() {
                   variant="outlined"
                   sx={{
                     '& .MuiOutlinedInput-root': {
+                      color: '#1976D2',
                       '& fieldset': {
-                        borderColor: 'rgba(255, 255, 255, 0.1)',
+                        borderColor: 'rgba(25, 118, 210, 0.3)',
                       },
                       '&:hover fieldset': {
-                        borderColor: 'primary.light',
+                        borderColor: 'rgba(25, 118, 210, 0.5)',
                       },
+                    },
+                    '& .MuiInputLabel-root': {
+                      color: '#1976D2',
+                    },
+                    '& .MuiInputLabel-root.Mui-focused': {
+                      color: '#1976D2',
                     },
                   }}
                 />
@@ -149,12 +156,19 @@ function Contact() {
                   variant="outlined"
                   sx={{
                     '& .MuiOutlinedInput-root': {
+                      color: '#1976D2',
                       '& fieldset': {
-                        borderColor: 'rgba(255, 255, 255, 0.1)',
+                        borderColor: 'rgba(25, 118, 210, 0.3)',
                       },
                       '&:hover fieldset': {
-                        borderColor: 'primary.light',
+                        borderColor: 'rgba(25, 118, 210, 0.5)',
                       },
+                    },
+                    '& .MuiInputLabel-root': {
+                      color: '#1976D2',
+                    },
+                    '& .MuiInputLabel-root.Mui-focused': {
+                      color: '#1976D2',
                     },
                   }}
                 />
@@ -168,12 +182,19 @@ function Contact() {
                   variant="outlined"
                   sx={{
                     '& .MuiOutlinedInput-root': {
+                      color: '#1976D2',
                       '& fieldset': {
-                        borderColor: 'rgba(255, 255, 255, 0.1)',
+                        borderColor: 'rgba(25, 118, 210, 0.3)',
                       },
                       '&:hover fieldset': {
-                        borderColor: 'primary.light',
+                        borderColor: 'rgba(25, 118, 210, 0.5)',
                       },
+                    },
+                    '& .MuiInputLabel-root': {
+                      color: '#1976D2',
+                    },
+                    '& .MuiInputLabel-root.Mui-focused': {
+                      color: '#1976D2',
                     },
                   }}
                 />
@@ -189,12 +210,19 @@ function Contact() {
                   variant="outlined"
                   sx={{
                     '& .MuiOutlinedInput-root': {
+                      color: '#1976D2',
                       '& fieldset': {
-                        borderColor: 'rgba(255, 255, 255, 0.1)',
+                        borderColor: 'rgba(25, 118, 210, 0.3)',
                       },
                       '&:hover fieldset': {
-                        borderColor: 'primary.light',
+                        borderColor: 'rgba(25, 118, 210, 0.5)',
                       },
+                    },
+                    '& .MuiInputLabel-root': {
+                      color: '#1976D2',
+                    },
+                    '& .MuiInputLabel-root.Mui-focused': {
+                      color: '#1976D2',
                     },
                   }}
                 />
@@ -203,10 +231,10 @@ function Contact() {
                   variant="contained"
                   size="large"
                   sx={{
-                    bgcolor: 'primary.main',
-                    color: 'white',
+                    bgcolor: '#1976D2',
+                    color: '#ffffff',
                     '&:hover': {
-                      bgcolor: 'primary.dark',
+                      bgcolor: 'rgba(25, 118, 210, 0.9)',
                       transform: 'translateY(-2px)',
                     },
                     transition: 'all 0.3s ease-in-out',
@@ -228,8 +256,9 @@ function Contact() {
                   elevation={0}
                   sx={{
                     p: 3,
-                    background: 'linear-gradient(145deg, #132F4C, #0A1929)',
-                    border: '1px solid rgba(255, 255, 255, 0.1)',
+                    background: 'rgba(255, 255, 255, 0.9)',
+                    backdropFilter: 'blur(10px)',
+                    border: '1px solid rgba(25, 118, 210, 0.2)',
                     display: 'flex',
                     alignItems: 'flex-start',
                     gap: 2,
@@ -237,23 +266,23 @@ function Contact() {
                     transition: 'transform 0.3s ease-in-out',
                     '&:hover': {
                       transform: 'translateY(-5px)',
-                      boxShadow: '0 8px 20px rgba(33, 150, 243, 0.2)'
+                      boxShadow: '0 8px 20px rgba(25, 118, 210, 0.2)'
                     }
                   }}
                 >
                   {React.cloneElement(info.icon, { 
                     sx: { 
                       fontSize: 40, 
-                      color: 'primary.main',
-                      filter: 'drop-shadow(0 0 8px rgba(33, 150, 243, 0.3))'
+                      color: '#1976D2',
+                      filter: 'drop-shadow(0 0 8px rgba(25, 118, 210, 0.3))'
                     } 
                   })}
                   <Box>
-                    <Typography variant="h6" sx={{ fontWeight: 'bold', mb: 1, color: 'primary.light' }}>
+                    <Typography variant="h6" sx={{ fontWeight: 'bold', mb: 1, color: '#1976D2' }}>
                       {info.title}
                     </Typography>
                     {info.details.map((detail, i) => (
-                      <Typography key={i} color="text.secondary">
+                      <Typography key={i} sx={{ color: '#1976D2' }}>
                         {detail}
                       </Typography>
                     ))}
@@ -272,8 +301,9 @@ function Contact() {
               height: '400px', 
               width: '100%', 
               overflow: 'hidden',
-              background: 'linear-gradient(145deg, #132F4C, #0A1929)',
-              border: '1px solid rgba(255, 255, 255, 0.1)',
+              background: 'rgba(255, 255, 255, 0.9)',
+              backdropFilter: 'blur(10px)',
+              border: '1px solid rgba(25, 118, 210, 0.2)',
               boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)'
             }}
           >
@@ -302,7 +332,7 @@ function Contact() {
           severity="success"
           variant="filled"
           sx={{
-            bgcolor: 'primary.main',
+            bgcolor: '#1976D2',
           }}
         >
           Mesajınız başarıyla gönderildi!

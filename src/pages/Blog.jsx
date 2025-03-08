@@ -62,7 +62,7 @@ function Blog() {
                 border: '1px solid rgba(255, 255, 255, 0.1)',
                 '&:hover': {
                   transform: 'translateY(-8px)',
-                  boxShadow: '0 8px 20px rgba(33, 150, 243, 0.2)'
+                  boxShadow: '0 8px 20px rgba(255, 255, 255, 0.3)'
                 }
               }}
             >
@@ -82,7 +82,9 @@ function Blog() {
                     sx={{ 
                       mb: 1, 
                       display: 'block',
-                      color: 'primary.light'
+                      color: '#ffffff',
+                      opacity: 0.8,
+                      textShadow: '0 0 5px rgba(255, 255, 255, 0.5)'
                     }}
                   >
                     {post.date}
@@ -93,13 +95,20 @@ function Blog() {
                     component="h2"
                     sx={{ 
                       fontWeight: 'bold',
-                      color: 'primary.main',
-                      textShadow: '0 0 8px rgba(33, 150, 243, 0.2)'
+                      color: '#ffffff',
+                      textShadow: '0 0 10px rgba(255, 255, 255, 0.5)'
                     }}
                   >
                     {post.title}
                   </Typography>
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography 
+                    variant="body2" 
+                    sx={{ 
+                      color: '#ffffff',
+                      opacity: 0.9,
+                      textShadow: '0 0 5px rgba(255, 255, 255, 0.3)'
+                    }}
+                  >
                     {post.summary}
                   </Typography>
                 </CardContent>

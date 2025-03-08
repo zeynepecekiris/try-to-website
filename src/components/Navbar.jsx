@@ -47,18 +47,33 @@ function Navbar() {
       }}
     >
       <Toolbar>
-        <Typography
-          variant="h6"
-          component="div"
-          sx={{
-            flexGrow: 1,
-            fontWeight: "bold",
-            letterSpacing: 1,
-            color: "#ffffff",
-          }}
-        >
-          Mobil Mağaza
-        </Typography>
+        <Box sx={{ 
+          display: 'flex', 
+          alignItems: 'center', 
+          gap: 2,
+          flexGrow: 1 
+        }}>
+          <img 
+            src="/DALL·E 2025-03-08 11.45.25 - A simple and modern icon using gradient colors, fitting a tech-themed online store. The icon should have a sleek and professional design, using smooth.webp" 
+            alt="Mobil Mağaza Logo" 
+            style={{ 
+              height: '40px',
+              width: 'auto',
+              filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.2))',
+            }}
+          />
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{
+              fontWeight: "bold",
+              letterSpacing: 1,
+              color: "#ffffff",
+            }}
+          >
+            MobistoreX
+          </Typography>
+        </Box>
 
         {isMobile ? (
           <>

@@ -137,19 +137,20 @@ function About() {
             elevation={0} 
             sx={{ 
               p: 4, 
-              background: 'linear-gradient(145deg, #132F4C, #0A1929)',
-              border: '1px solid rgba(255, 255, 255, 0.1)',
+              background: 'rgba(255, 255, 255, 0.8)',
+              backdropFilter: 'blur(10px)',
+              border: '1px solid rgba(255, 255, 255, 0.3)',
               boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
               mb: 4,
               animation: `${fadeIn} 1s ease-out 0.6s both`,
               transition: 'transform 0.3s ease, box-shadow 0.3s ease',
               '&:hover': {
                 transform: 'translateY(-5px)',
-                boxShadow: '0 8px 30px rgba(33, 150, 243, 0.3)'
+                boxShadow: '0 8px 30px rgba(174, 215, 255, 0.5)'
               }
             }}
           >
-            <Typography variant="h5" gutterBottom sx={{ color: 'primary.main', fontWeight: 'bold', textShadow: '0 0 8px rgba(33, 150, 243, 0.2)', display: 'flex', alignItems: 'center', gap: 1 }}>
+            <Typography variant="h5" gutterBottom sx={{ color: 'primary.main', fontWeight: 'bold', textShadow: '0 0 8px rgba(174, 215, 255, 0.3)', display: 'flex', alignItems: 'center', gap: 1 }}>
               <StorefrontIcon />
               Hikayemiz
             </Typography>
@@ -175,14 +176,15 @@ function About() {
             elevation={0} 
             sx={{ 
               p: 4, 
-              background: 'linear-gradient(145deg, #132F4C, #0A1929)',
-              border: '1px solid rgba(255, 255, 255, 0.1)',
+              background: 'rgba(255, 255, 255, 0.8)',
+              backdropFilter: 'blur(10px)',
+              border: '1px solid rgba(255, 255, 255, 0.3)',
               boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
               animation: `${fadeIn} 1s ease-out 0.9s both`,
               transition: 'transform 0.3s ease, box-shadow 0.3s ease',
               '&:hover': {
                 transform: 'translateY(-5px)',
-                boxShadow: '0 8px 30px rgba(33, 150, 243, 0.3)'
+                boxShadow: '0 8px 30px rgba(255, 209, 220, 0.5)'
               }
             }}
           >
@@ -238,14 +240,15 @@ function About() {
                     sx={{ 
                       p: 3, 
                       textAlign: 'center',
-                      background: 'linear-gradient(145deg, #132F4C, #0A1929)',
-                      border: '1px solid rgba(255, 255, 255, 0.1)',
+                      background: 'rgba(255, 255, 255, 0.8)',
+                      backdropFilter: 'blur(10px)',
+                      border: '1px solid rgba(255, 255, 255, 0.3)',
                       height: '100%',
                       animation: `${fadeIn} 1s ease-out ${0.3 * (index + 4)}s both`,
                       transition: 'all 0.3s ease-in-out',
                       '&:hover': {
                         transform: 'translateY(-8px) scale(1.05)',
-                        boxShadow: '0 12px 30px rgba(33, 150, 243, 0.3)'
+                        boxShadow: '0 12px 30px rgba(255, 212, 186, 0.5)'
                       }
                     }}
                   >
